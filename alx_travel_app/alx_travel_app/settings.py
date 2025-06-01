@@ -27,6 +27,8 @@ env = environ.Env(
 # Read .env file
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
+DEBUG = env('DEBUG')
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
@@ -49,6 +51,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'listings',
+    'rest_framework',   # Add this line
+    'corsheaders',      # Add this line
 ]
 
 MIDDLEWARE = [
